@@ -1,5 +1,6 @@
 img{width: 150px;height: 100px;
-    margin-right:6px
+    margin-right:6px;
+    float:left;
 }
 body{
     background-color: rgb(91, 86, 82);
