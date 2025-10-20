@@ -3,13 +3,16 @@ img{width: 200px;height: auto;
     border:2px solid black;
     border-radius: 5px;
     float:left;
+    background-color: white;
 }
 #frame{
     width:1000px;
     margin-right:auto;
     margin-left:auto;
-    border-left:5px double white;
-    border-right:5px double white;
+    border-left:5px ridge white;
+    border-right:5px ridge white;
+    border-top:5px ridge white;
+    border-bottom:5px ridge white;
     padding: 30px 60px;
     background-color:rgb(151, 138, 125)
 }
@@ -49,8 +52,9 @@ h3{
 }
 
 p{
+    font-family: sans-serif;
     line-height:2em;
-    border: 2px ridge black;
+    border: 2px ridge #000000;
     padding:20px;
 }
 a:link{
@@ -108,8 +112,10 @@ a:active{
 @media(max-width:992px){
     #frame{
         width:100%;
+        border-top: 5px ridge white;
+        border-bottom: 5px ridge white;
     }
-    body, p, #frame{
+    body, p{
         margin:0;
         border:none;
         padding:0;
@@ -129,6 +135,11 @@ a:active{
     }
 }
 @media(max-width:768px){
+    #frame{
+        border-top: 5px ridge white;
+        border-bottom: 5px ridge white;
+    }
+
     #videogames{
         display:none;
     }
@@ -148,12 +159,17 @@ a:active{
 #dog{
     display:none;
 }
-@media(max-width:501px){
-    #dog{
-        display:inline;
-        width:100%;
-        height:100%;
-        float:top;  
+/* my easter egg */
+@media(max-width:480px){
+    #everything{
+        display:none;
     }
-
+    #dog{
+        border:none;
+        border-radius:0px;
+        display:inline;
+        width:80%;
+        height:80%;
+        float:center; 
+    }
 }
