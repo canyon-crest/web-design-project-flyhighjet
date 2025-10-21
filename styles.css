@@ -3,23 +3,45 @@ img{width: 200px;height: auto;
     border:2px solid black;
     border-radius: 5px;
     float:left;
-    background-color: white;
 }
 #frame{
     width:1000px;
-    margin-right:auto;
-    margin-left:auto;
+    margin: 20px auto;
     border-left:5px ridge white;
-    border-right:5px ridge white;
+    border-right:5px groove white;
     border-top:5px ridge white;
-    border-bottom:5px ridge white;
-    padding: 30px 60px;
+    border-bottom:5px groove white;
+    padding-left: 60px;
+    padding-right:60px;
     background-color:rgb(151, 138, 125)
 }
 body{
-    background-color:rgb(109, 100, 91);
+    background: 
+        repeating-radial-gradient(
+            circle at 25px 25px,
+            rgb(89, 82, 75) 0,
+            rgb(89, 82, 75) 3px,
+            transparent 3px,
+            transparent 50px
+        ),
+        rgb(109, 100, 91);
+    background-size: 50px 50px;
+    animation: moveLines 10s linear infinite;
     color:rgb(234, 217, 193);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
+
+@keyframes moveLines {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
 h1{
     background-color: rgb(171, 157, 135);
     border:3px solid burlywood;
@@ -30,13 +52,13 @@ h1{
     margin-right: auto;
     margin-left:auto;
     font-size: 38px;
-    font-family: 'Arial Narrow'
+    font-family:sans-serif
 }
 h2{
     text-align: center;
     font-style:italic;
     font-size: 26px;
-    font-family: 'Arial Narrow'
+    font-family:sans-serif;
 }
 h3{
     border-left: 15px groove #afad8b;
@@ -48,13 +70,15 @@ h3{
     border-right:2px solid #afad8b;
     width:25%;
     font-size:20px;
-    font-family: 'Arial Narrow'
+    font-family: sans-serif
 }
 
 p{
-    font-family: sans-serif;
     line-height:2em;
-    border: 2px ridge #000000;
+    border-top: 2px groove black;
+    border-bottom: 2px ridge black;
+    border-left: 2px groove black;
+    border-right: 2px ridge black;
     padding:20px;
 }
 a:link{
@@ -85,10 +109,13 @@ a:active{
 }
 #videogames{  
     width: 300px;
-    border: 2px solid black;
+    border-top: 2px groove black;
+    border-bottom: 2px ridge black;
+    border-left: 2px groove black;
+    border-right: 2px ridge black;
 }
 .header{
-    font-family:'Arial Narrow';
+    font-family:sans-serif;
 }
 .underline{
     text-decoration: underline;
@@ -111,41 +138,45 @@ a:active{
 }
 @media(max-width:992px){
     #frame{
-        width:100%;
-        border-top: 5px ridge white;
-        border-bottom: 5px ridge white;
+           width:90%;
+           border-top:5px ridge white;
+           border-bottom:5px groove white;
+           margin: 20px auto;
+           padding-left: 8px;
+           padding-right: 8px;
+           padding-top: 20px;
+           padding-bottom: 20px;
+           box-sizing: border-box;
     }
     body, p{
         margin:0;
         border:none;
         padding:0;
     }
-    p{
-        padding:20px;
-    }
-    #videogames{
-        margin-left:20px;
-    }
     h3{
-        margin-left:20px;
+        width:40%;
     }
-        img{
+    img{
         width:200px;
         height: auto;
+        max-width: 100%;
     }
 }
 @media(max-width:768px){
     #frame{
-        border-top: 5px ridge white;
-        border-bottom: 5px ridge white;
+        width:90%;
+        margin-top:20px;
+        margin-bottom:20px;
+        padding: 15px;
+        box-sizing: border-box;
     }
-
     #videogames{
         display:none;
     }
     img{
         width:150px;
         height: 100px;
+        max-width: 100%;
     }
 }
 @keyframes the-funny {
@@ -161,15 +192,14 @@ a:active{
 }
 /* my easter egg */
 @media(max-width:480px){
-    #everything{
-        display:none;
+    #all{
+        display:none
     }
     #dog{
-        border:none;
-        border-radius:0px;
         display:inline;
-        width:80%;
-        height:80%;
-        float:center; 
+        width:50%;
+        height:50%;
+        margin:120px 20px 20px 100px;
     }
+
 }
