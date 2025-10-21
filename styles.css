@@ -107,8 +107,12 @@ a:active{
     float:right;
     margin-left:15px;
 }
+ul{
+    line-height: 1.5em;
+}
 #videogames{  
     width: 300px;
+    margin-top: 5px;
     border-top: 2px groove black;
     border-bottom: 2px ridge black;
     border-left: 2px groove black;
@@ -202,4 +206,19 @@ a:active{
         margin:120px 20px 20px 100px;
     }
 
+}
+@media(max-width:350px){
+    #dog{
+        width:50%;
+        height:50%;
+        margin:120px 100px 20px 70px;
+    }
+
+}
+@media(max-width:210px){
+    #dog{
+        width:50%;
+        height:50%;
+        margin:120px 100px 20px 40px;
+    }
 }
